@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="./home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<style>
+    .hh {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .card {
+        margin: 5px;
+        border: none;
+        border-radius: 10px;
+
+    }
+
+    .card:hover {
+        box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    }
+
+    .add {
+        font-weight: bolder;
+    }
+    .bt:hover {
+        transition: 0.5s ease;
+        -webkit-transform: scale(1.1);
+        background: #31708f;
+    }
+</style>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand ms-4" href="#"><img src="img/p.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto ">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Properties
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="addpro.html">ADD Properties</a></li>
+                            <li><a class="dropdown-item" href="edit.html">Edit Properties</a></li>
+                            <li><a class="dropdown-item" href="#">All Properties</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Login/Signup
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="login.html">Login</a></li>
+                            <li><a class="dropdown-item" href="index.html">Signup</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item me-4">
+                        <a class="nav-link active" aria-current="page" href="profile.html">Profile</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hh">
+        <!-- <div class="card " style="width: 18rem;">
+            <img src="img/h1.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Andhra Pradesh</h5>
+                <p class="card-text"><span class="add">Contact Address:</span> Postmaster, Post Office VELAGAPUDI
+                    (BRANCH OFFICE), GUNTUR, ANDHRA
+                    PRADESH (AP), India (IN), Pin Code:- 522503</p>
+                <a href="#" class="btn btn-primary">Buy Now</a>
+                <a href="#" class="btn btn-primary ms-5 bg-success bt">Add to cart</a>
+            </div>
+        </div> --> 
+        <div class="container">
+            <div class="row" id="show">
+
+            </div> </div>
+        <!-- <div class="card" style="width: 18rem;">
+            <img src="img/h3.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text"><span class="add">Contact Address:</span> Postmaster, Post Office VELAGAPUDI
+                    (BRANCH OFFICE), GUNTUR, ANDHRA
+                    PRADESH (AP), India (IN), Pin Code:- 522503</p>
+                <a href="#" class="btn btn-primary">Buy Now</a>
+                <a href="#" class="btn btn-primary ms-5 bg-success bt">Add to cart</a>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="img/h1.jpg" class="card-img-top bt" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text"><span class="add">Contact Address:</span> Postmaster, Post Office VELAGAPUDI
+                    (BRANCH OFFICE), GUNTUR, ANDHRA
+                    PRADESH (AP), India (IN), Pin Code:- 522503</p>
+                <a href="#" class="btn btn-primary">Buy Now</a>
+                <a href="#" class="btn btn-primary ms-5 bg-success bt">Add to cart</a>
+            </div>
+        </div> -->
+       <b></b>
+        
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+
+    <script>
+
+        function showData(){
+        let data = JSON.parse(localStorage.getItem("addProperties")) || [];
+        card =''
+        data.forEach(element => {
+            card +=
+            ` 
+            <div class="card " style="width: 18rem; ">
+                   <img src="${element.image}">
+            <div class="card-body">
+            <h5 class="card-title ">State - ${element.state}</h5>
+              <p class="card-text m-0"><h6>Contact Address: ${element.add} ${element.add2} ${element.city} Zipcode- ${element.zipcode}</h6></p>
+              <p class="card-text m-0">M_number :- ${element.number}</p>
+              <p class="card-text m-0"><b>${element.f_name} ${element.l_name}</b></p>
+              <a href="#" class="btn btn-primary">Buy Now</a>
+                 <a href="#" class="btn btn-primary m-3 bg-success bt">Add to cart</a>
+               </div>
+               </div>
+              `   
+        });
+        document.getElementById("show").innerHTML = card; 
+       
+    }
+    showData()
+    
+    </script>
+</html>
